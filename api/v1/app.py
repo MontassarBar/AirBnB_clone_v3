@@ -8,6 +8,8 @@ from api.v1.views import app_views
 '''f'''
 app = Flask(__name__)
 app.register_blueprint(app_views)
+
+
 @app.teardown_appcontext
 def S_C(err):
     '''close storage'''
